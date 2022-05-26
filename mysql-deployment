@@ -22,7 +22,7 @@ spec:
             secretKeyRef:
               name: mysql-secret
               key: password
-        ports:t
+        ports:
         - containerPort: 3306
           name: mysql
         volumeMounts:
