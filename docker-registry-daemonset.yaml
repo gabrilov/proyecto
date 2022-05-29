@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: registry-ca
@@ -6,6 +6,9 @@ metadata:
   labels:
     k8s-app: registry-ca
 spec:
+  selector:
+    matchLabels:
+      name: registry-ca
   template:
     metadata:
       labels:
@@ -29,3 +32,4 @@ spec:
       - name: ca-cert
         secret:
           secretName: registry-ca
+
