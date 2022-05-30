@@ -14,11 +14,7 @@ spec:
   persistentVolumeReclaimPolicy: "Retain"
   hostPath:
     path: "/mysql-data"
-  # nfs:
-  #   path: /mnt/data/
-  #   server: 192.168.122.5
-  #   readOnly: false
-
+    
 ---
 
 apiVersion: v1
