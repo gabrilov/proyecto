@@ -15,7 +15,7 @@ spec:
         app: mysql
     spec:
       containers:
-      - image: docker.gabrilov.com/mysql-webapp
+      - image: trastolillo/mysql
         name: mysql
         env:
         - name: MYSQL_ROOT_PASSWORD
@@ -23,16 +23,9 @@ spec:
             secretKeyRef:
               name: mysql-secret
               key: password
-        - volumeMounts:
-          - name: registry-ca
-            mountPath: /etc/docker/certs.d/docker.gabrilov.com
         ports:
         - containerPort: 3306
           name: mysql
-      volumes:
-      - name: registry-ca
-        secret:
-          secretName: certificado-registro
 ---
 apiVersion: v1
 kind: Service
