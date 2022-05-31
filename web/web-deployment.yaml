@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vista-deployment
+spec:
+  selector:
+    matchLabels:
+      run: vista
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: vista
+    spec:
+      containers:
+      - name: vista
+        image: trastolillo/web
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: vista-svc
+  labels:
+    run: vista
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+  selector:
+    run: vista
