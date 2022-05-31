@@ -16,7 +16,14 @@ spec:
       - name: vista
         image: trastolillo/web
         ports:
-        - containerPort: 8080
+        - containerPort: 80
+        resources:
+          requests:
+            memory: "300Mi"
+            cpu: "500m"
+          limits:
+            memory: "500Mi"
+            cpu: "700m"
 ---
 apiVersion: v1
 kind: Service
@@ -26,8 +33,8 @@ metadata:
     run: vista
 spec:
   ports:
-  - port: 8080
-    targetPort: 8080
+  - port: 80
+    targetPort: 80
     protocol: TCP
   selector:
     run: vista

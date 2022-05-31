@@ -41,7 +41,7 @@ spec:
   - port: 5000
     protocol: TCP
     targetPort: 5000
-    nodePort: 30000
+    nodePort: 31000
   selector:
     app: flaskapi
   type: LoadBalancer

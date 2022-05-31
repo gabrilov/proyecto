@@ -13,5 +13,5 @@ spec:
           service:
             name: vista-svc
             port:
-              number: 8080
+              number: 80
   ingressClassName: nginx
