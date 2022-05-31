@@ -8,10 +8,10 @@ metadata:
 spec:
   storageClassName: manual
   capacity:
-    storage: 8Gi
+    storage: 3Gi
   accessModes:
-    - ReadWriteMany
-  persistentVolumeReclaimPolicy: "Retain"
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
   hostPath:
     path: "/mysql-data"
     
@@ -24,7 +24,7 @@ metadata:
 spec:
   storageClassName: manual
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
   resources:
     requests:
       storage: 2Gi
