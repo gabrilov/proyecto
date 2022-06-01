@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: mysql-deployment
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: mysql
@@ -32,7 +32,7 @@ spec:
       volumes:
       - name: mysql-persistent-storage
         persistentVolumeClaim:
-          claimName: mysql-pvc
+          claimName: mysql-volume
 ---
 apiVersion: v1
 kind: Service
