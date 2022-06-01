@@ -17,6 +17,7 @@ spec:
       containers:
         - name: flaskapi
           image: trastolillo/flask
+          imagePullPolicy: Always
           ports:
             - containerPort: 5000
           env:
