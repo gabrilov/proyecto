@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       run: vista
-  replicas: 1
+  replicas: 3
   template:
     metadata:
       labels:
@@ -15,6 +15,7 @@ spec:
       containers:
       - name: vista
         image: trastolillo/web
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
         resources:
