@@ -1,0 +1,25 @@
+### Alias para el clúster k3s ###
+
+Host m1
+	Hostname 192.168.122.10
+	User root
+
+Host m2
+	Hostname 192.168.122.20
+	User root
+
+Host m3
+	Hostname 192.168.122.30
+	User root
+
+Host w1
+	Hostname 192.168.122.31
+	User root
+
+Host w2
+	Hostname 192.168.122.32
+	User root
+
+Host w3
+	Hostname 192.168.122.33
+	User root
