@@ -7,8 +7,11 @@ kubectl create -f https://raw.githubusercontent.com/kubernetes/dashboard/${VERSI
 
 kubectl create -f dashboard.admin-user.yml -f dashboard.admin-user-role.yml
 
-echo "Token:"
+echo "------------------"
 echo $(kubectl -n kubernetes-dashboard describe secret admin-user-token | grep '^token')
-
+echo '------------------'
+echo
+echo 'Acceso:'
+echo "http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/"
 
 
