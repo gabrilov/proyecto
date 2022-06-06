@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0.8em;
+    text-align: justify;
+}
+
+body {
+    margin: 20px auto;
+    font-family: 'Montserrat', sans-serif;
+    background: #ece8cf;
+    max-width: 1200px;
+    font-size: 1em;
+    font-weight: 700;
+}
+
+header {
+    
+    grid-column: -1 / 1;
+    background: #363661;
+    color: #ece8cf;
+    justify-self: stretch;
+    text-align: center;
+    box-shadow: 1px 0 10px #535353;
+}
+
+
+nav ul {
+    margin: auto;
+    max-width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    list-style: none;
+}
+
+li {
+    margin: 30px auto;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 25%;
+}
+
+.botones-registro button {
+    padding: 5px;
+}
+
+#modulos,
+#tareas,
+#unidades {
+    cursor: pointer;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-items: start;
+}
+
+    
+.boton {
+    margin: 10px auto;
+    text-align: center;
+}
+
+table {
+    margin: 20px;
+    border-collapse: collapse;
+    grid-column: 1/-1;
+}
+
+table td {
+    padding: 10px;
+}
+
+table td,
+table th {
+    border: 1px solid;
+    padding: 5px 10px;
+}
+
+thead {
+    background-color: ghostwhite;
+}
+
+tr {
+    background-color: cornsilk;
+    transition: all 500ms ease;
+}
+
+tr:hover {
+    background-color: darkgrey;
+}
+
+.trash {
+    transition: all 500ms ease;
+}
+
+.trash:hover {
+    background-color: red;
+}
+
+#tbody tr {
+    cursor: pointer;
+}
+
+form {
+    grid-column: 1 / -1;
+    margin: 20px auto;
+    text-align: center;
+    display: none;
+}
+
+form div {
+    margin: 10px auto;
+}
+
+form div input {
+    margin: auto 15px;
+}
+
+#form-modulo {
+    display: grid;
+    grid-template-columns: 1fr 7fr 1fr 2fr;
+    grid-template-rows: 1fr 1fr ;
+    justify-items: stretch;
+    gap: 10px;
+}
+
+label {
+    justify-self: start;
+    align-self: end;
+}
+
+input, textarea {
+    font-size: 1.2em;
+    word-break: keep-all
+}
+
+#id-modulo {
+    max-width: 100px;
+}
+
+#registrar {
+    grid-template-rows: 2 / -1;    
+    display: none;
+}
+
+
+.enviar {
+    font-size: 1.1em;
+    /* grid-row: 1 / -1;
+    align-self: center;
+    justify-self: stretch; */
+}
+
+.mensaje {
+    grid-column: 1 / -1;
+    justify-content: center;
+    font-weight: bold;
+    color: red;
+    display: none;
+}
+
+.mensaje-borrado {
+    font-weight: bold;
+    justify-content: center;
+    text-align: center;
+    color: red;
+    display: none;
+}
+
+.iconos {
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Iconos */
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL'0,
+        'wght'400,
+        'GRAD'0,
+        'opsz'48
+}

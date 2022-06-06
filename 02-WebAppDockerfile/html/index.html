@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+
+    <script src="./script.js"></script>
+    <title>WebApp</title>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <ul id="menu">
+          <li id="modulos">Módulos</li>
+          <li id="unidades">Unidades</li>
+        </ul>        
+      </nav>
+    </header>
+
+    <main>
+      
+      <form id="form-modulo"">
+        <label for="id-modulo">Id</label>
+        <label id="label2" for="nombre">Nombre</label>
+        <label id="label3" for="url">URL</label>
+        <button class="enviar" type="reset">Limpiar</button>
+        <input type="text" name="id-modulo" id="id-modulo" required />
+        <input type="text" name="nombre" id="nombre" required />
+        <input type="text" name="url" id="url" required />
+        <button class="enviar" type="submit">Enviar</button>
+        <h3 class="mensaje">Rellena los campos si quieres que funcione</h3>
+      </form>
+
+      <table>
+        <thead id="thead"></thead>
+        <tbody id="tbody"></tbody>
+      </table>
+      <h2 class="mensaje-borrado">ELEMENTO BORRADO</h2>
+
+    </main>
+  </body>
+</html>
